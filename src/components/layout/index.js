@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <div>
       <header>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/result">Result</Link> | <Link to="/about">About us</Link>
+          <Link to="/">Characters</Link> | <Link to="/episode">Episodes</Link> | <Link to="/about">About us</Link>
         </nav>
       </header>
       <main>{children}</main>
