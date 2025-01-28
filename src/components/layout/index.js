@@ -1,15 +1,12 @@
-import { Link } from 'react-router-dom';
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <header>
-        <nav>
-          <Link to="/">Characters</Link> | <Link to="/episode">Episodes</Link> | <Link to="/about">About us</Link>
-        </nav>
-      </header>
+      <Header/>
       <main>{children}</main>
-      <footer>© 2025 My App</footer>
+      <Footer/>
     </div>
   );
 };
