@@ -9,7 +9,7 @@ export const getCharacters = async() => {
         species: res.species,
         image: res.image
     }));
-    console.log('')
+    
     return character;
 
 }
