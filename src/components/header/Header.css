@@ -1,0 +1,7 @@
+header nav{
+    background-color: #88e23b;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

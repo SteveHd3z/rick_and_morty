@@ -5,6 +5,7 @@ const Character = () => {
 
   const { character } = useMyContext();
 
+
   return (
 
       // Mapeamos los personajes para renderizarlos en el DOM
@@ -19,6 +20,7 @@ const Character = () => {
       )}
       </div>  
   );
+
 }
 
 export default Character;

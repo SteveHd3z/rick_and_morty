@@ -1,0 +1,9 @@
+.body_main{
+    background-image: url(/src/assets/images/r&m.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    min-height: 700px;  
+    overflow: auto;  
+}
+
