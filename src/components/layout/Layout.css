@@ -1,9 +1,8 @@
 .body_main{
     background-image: url(/src/assets/images/r&m.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover; /* Ajusta la imagen sin distorsión */
     background-position: center;
-    min-height: 700px;  
-    overflow: auto;  
+    background-attachment: fixed; /* Mantiene la imagen fija */
+    background-repeat: no-repeat; 
 }
 
