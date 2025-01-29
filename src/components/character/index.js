@@ -6,21 +6,20 @@ const Character = () =>{
     
     console.log('component',character)
 
-    return (   <div>
+    return (   
+        <div>
         {
           // Mapeamos los personajes para renderizarlos en el DOM
-          character.map((res) => {          
-            return (
+          character.map((res) => ( 
               <div key={res.id}>
                 <h3>ID: {res.id}</h3>
                 <p>Nombre: {res.name}</p>
                 <p>Especie: {res.species}</p>
                 <img src={res.image} alt={res.name} width="100" />
-              </div>
-            );
-          })
+        </div>
+          ))
         }
-      </div>
+        </div>
     );
 }
 

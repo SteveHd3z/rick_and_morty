@@ -1,0 +1,14 @@
+
+
+.container_episode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list_episode {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}

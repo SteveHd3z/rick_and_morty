@@ -19,11 +19,10 @@ const getEpisodes = async () => {
         const episode = data.results.map(res => ({
             id: res.id,
             name: res.name,
+            characters: res.characters,
             link: res.url,
             created: res.created
-        }));
-
-        console.log('Episodios en get: ', episode);
+        }));  
 
         return episode;
     } catch (error) {

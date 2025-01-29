@@ -1,0 +1,9 @@
+nav a{
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #FFFFFF;
+    font-size: 22px;
+}

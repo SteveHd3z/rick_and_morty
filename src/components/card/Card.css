@@ -1,0 +1,10 @@
+.card{
+    height: 230px;
+    width: 180px;
+    background-color: #ffffff;
+}
+
+li{
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
