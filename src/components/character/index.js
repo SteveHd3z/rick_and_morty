@@ -1,27 +1,24 @@
 import { useMyContext } from "../../context/DataProvider";
+import { GridCard } from "../card/GridCard";
 
-const Character = () =>{
+const Character = () => {
 
-    const { character } = useMyContext();
-    
-    console.log('component',character)
+  const { character } = useMyContext();
 
-    return (   <div>
-        {
-          // Mapeamos los personajes para renderizarlos en el DOM
-          character.map((res) => {          
-            return (
-              <div key={res.id}>
-                <h3>ID: {res.id}</h3>
-                <p>Nombre: {res.name}</p>
-                <p>Especie: {res.species}</p>
-                <img src={res.image} alt={res.name} width="100" />
-              </div>
-            );
-          })
-        }
-      </div>
-    );
+  return (
+
+      // Mapeamos los personajes para renderizarlos en el DOM
+      <div className="card-grid" >
+         {character.map((res) => 
+         (       
+            <GridCard
+            key={res.id}
+              {...res}
+            />   
+        )
+      )}
+      </div>  
+  );
 }
 
 export default Character;
