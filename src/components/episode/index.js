@@ -1,30 +1,45 @@
 import { useMyContext } from "../../context/DataProvider";
 import './Episode.css'
-import Card from "../card/Card";
+import CardEpisode from "../card/CardEpisode";
 
 const Episode = () => {
 
-  const { episode } = useMyContext();
+  const { episode,character } = useMyContext();
+  
 
-  const getRandomCharacter = (characters) => {
-    const randomIndex = Math.floor(Math.random() * characters.length);
-    return characters[randomIndex];
-  };
+  const getRandomCharacter = (episode) => {
+
+    if (!episode || !episode.characters || episode.characters.length === 0) {
+        console.warn("No hay personajes en este episodio.");
+        return null;
+    }
+
+    const randomIndex = Math.floor(Math.random() * episode.characters.length);
+    const randomCharacter = episode.characters[randomIndex];
+
+    console.log("Character Episode:", randomCharacter);
+    return randomCharacter;
+};
+
 
   return (
     <div className="container_episode">
-      <h1>Lista de Episodios</h1>
+
+      <h1 hidden>Lista de Episodios</h1>   
       <ul className="list_episode">
-        {episode.map((enlace) => (
-          <li key={enlace.id}> 
-          <Card>
-            <a href={enlace.link} target="_blank">
-              Episodio: {enlace.id}{" "}
-            </a>
-          </Card>           
-            
+
+        {episode.map((dato) => (
+
+          <li key={dato.id}> 
+            <CardEpisode 
+              id={dato.id}
+              name={dato.name}
+              link={dato.link}
+              character={getRandomCharacter(episode)}
+            /> 
           </li>
         ))}
+
       </ul>
     </div>
   );
