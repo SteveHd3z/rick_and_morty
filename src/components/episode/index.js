@@ -1,24 +1,24 @@
 import { useMyContext } from "../../context/DataProvider";
 import './Episode.css'
 import CardEpisode from "../card/CardEpisode";
+import Practice from "../../Practica1";
+import { getCharactersbyId } from "../../helpers/getCharacters";
 
 const Episode = () => {
 
-  const { episode,character } = useMyContext();
+  const { episode } = useMyContext(); 
+  //Practice()
   
-
-  const getRandomCharacter = (episode) => {
-
-    if (!episode || !episode.characters || episode.characters.length === 0) {
-        console.warn("No hay personajes en este episodio.");
-        return null;
-    }
+  const getLinkCharacter =(episode) => {
 
     const randomIndex = Math.floor(Math.random() * episode.characters.length);
     const randomCharacter = episode.characters[randomIndex];
 
-    console.log("Character Episode:", randomCharacter);
-    return randomCharacter;
+    const urlbase=randomCharacter.split('/')
+    const linkImage=`https://rickandmortyapi.com/api/character/avatar/${urlbase[5]}.jpeg`
+
+    
+    return linkImage;
 };
 
 
@@ -29,13 +29,13 @@ const Episode = () => {
       <ul className="list_episode">
 
         {episode.map((dato) => (
-
+          
           <li key={dato.id}> 
             <CardEpisode 
               id={dato.id}
               name={dato.name}
               link={dato.link}
-              character={getRandomCharacter(episode)}
+              character={getLinkCharacter(dato)}
             /> 
           </li>
         ))}

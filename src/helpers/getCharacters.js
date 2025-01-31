@@ -13,3 +13,21 @@ export const getCharacters = async() => {
     return character;
 
 }
+
+export const getCharactersbyId = async(url) => {
+    const resp = await fetch( url );
+    const  results  = await resp.json();
+
+    const character = {
+        id: results.id,
+        names: results.name,
+        species: results.species,
+        image: results.image
+    };
+
+    
+    return character;
+
+}
+
+
