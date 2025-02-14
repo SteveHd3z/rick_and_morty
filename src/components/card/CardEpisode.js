@@ -1,8 +1,6 @@
 import './Card.css'
 
-const CardEpisode=(props)=>{
-
-    console.info('Personaje en Card: ',props.character)
+const CardEpisode=(props)=>{    
 
     return (
     <a className='card' href={props.link} target='blank'>
