@@ -1,4 +1,4 @@
-import { Pagination,Stack } from "@mui/material";
+import { colors, Pagination,Stack } from "@mui/material";
 
 const PaginationOutlined = () => {
 
@@ -9,8 +9,20 @@ const PaginationOutlined = () => {
             justifyContent: "center",
             height: "35px",
             padding: '30px',
-            backgroundColor: 'aqua'
         },
+        '& .MuiButtonBase-root': {
+            backgroundColor: '#ffffff',
+            color: '#000000'
+        },
+        '& .Mui-selected': {
+          backgroundColor: '#88e23b'
+        },
+        '& .MuiPaginationItem-ellipsis': {
+          backgroundColor: 'transparent',
+          color: 'white',
+          fontSize: '35px',
+          fontWeight: '700'
+        }
 
       };
 
